@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/logo.png" />
+    <title>Nos travaux</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a href="./index.html">
+                <img src="./img/Alembic.svg">
+            </a>
+            <ul>
+                <li><a href="./Travaux.html">Works</a></li>
+                <li><a href="./Nous-decouvrir.html">About us</a></li>
+                <li><a href="./Contact-us.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="header-work">
+            <img src="./img/physique.jpg"/>
+            <h1>Works .</h1>
+        </div>
+    </header>
+    <article class="actual">
+        <h1>Dernier travaux réalisés :</h1>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-item">
+                        <h1>TP 1 : Thermodynamique</h1>
+                        <div class="carousel-img">
+                            <img src="./img/telescope.svg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>TP 2 : Dynamique de rotation</h1>
+                        <div class="carousel-img">
+                            <img src="./img/jar.svg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>TP 3 : Photodiode</h1>
+                        <div class="carousel-img">
+                            <img src="./img/test tube.svg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>TP 4 : Transfert thermique</h1>
+                        <div class="carousel-img">
+                            <img src="./img/microscope.svg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>TP 5 : Ballistique</h1>
+                        <div class="carousel-img">
+                            <img src="./img/comet.svg">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button next">
+                    <img src="./img/flèche.png">
+                </button>
+            </div>
+        <script>
+            const carousel = document.querySelector('.carousel');
+            const carouselContainer = carousel.querySelector('.carousel-container');
+            const carouselItems = carousel.querySelectorAll('.carousel-item');
+            const nextButton = carousel.querySelector('.carousel-button.next');
+        
+            let currentIndex = 0;
+        
+            function showCurrentItem() {
+                carouselContainer.style.transform = `translateX(${-currentIndex * 434}px)`;
+            }
+        
+            function moveToNextItem() {
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                showCurrentItem();
+            }
+        
+            nextButton.addEventListener('click', moveToNextItem);
+        </script>
+    </article>
+    <section class="work">
+        <article class="work">
+            <div class="title">
+                <h1>Tous les travaux</h1>
+            </div>
+            <div class="section-1">
+                <h2>Licence 2, semestre 1</h2>
+                <h3>TP Physique</h3>
+                <article class="section-2">
+                    <div class="work-line">
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                    </div>
+                    <div class="work-line">
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                    </div>
+                </article>
+                <h3>TP Electronique/Electricité</h3>
+                <article>
+                    <div class="work-line">
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="section-1">
+                <h2>Licence 2, semestre 1</h2>
+                <h3>TP Physique</h3>
+                <article>
+                    <div class="work-line">
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                    </div>
+                    <div class="work-line">
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                        <div class="card">
+                            <p>bloubliblou</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
